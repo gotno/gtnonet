@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8",
+    "luxon": "^3.4.4"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "clean": "rm -rf dist",
+    "rebuild": "npm run clean && npm run build",
+    "start": "npm run clean && npx @11ty/eleventy --serve"
+  }
+}
