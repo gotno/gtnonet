@@ -8,6 +8,6 @@
     "build": "npx @11ty/eleventy",
     "clean": "rm -rf dist",
     "rebuild": "npm run clean && npm run build",
-    "start": "npm run clean && npx @11ty/eleventy --serve"
+    "start": "npm run clean && npx @11ty/eleventy --serve --port 8081"
   }
 }

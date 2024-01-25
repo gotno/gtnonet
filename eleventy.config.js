@@ -29,6 +29,7 @@ const imageShortcodeCallback =
 
 module.exports = (eleventyConfig) => {
 	eleventyConfig.addShortcode('image', imageShortcodeCallback);
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   return {
     dir: {

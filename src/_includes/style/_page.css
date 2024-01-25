@@ -1,0 +1,213 @@
+html {
+  --gutter: 2rem;
+}
+
+body > header {
+  position: sticky;
+  top: 0;
+
+  /* margin-top: calc(3 * var(--gutter)); */
+
+  background-color: var(--default-background-color);
+  z-index: 1;
+}
+
+body > header > h1 {
+  font-size: 3rem;
+  letter-spacing: .05rem;
+  font-weight: 800;
+
+  padding: 2rem 0;
+  padding-left: var(--gutter);
+
+  width: 100%;
+  overflow: hidden;
+}
+
+body > header > h1 > span.dropline,
+body > header > h1 > a,
+body > header > h1 > a:hover,
+body > header > h1 > a:visited {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  text-underline-offset: 0.75rem;
+  text-decoration-color: var(--default-highlight-color);
+}
+body > header > h1 > span.dropline:after,
+body > header > h1 > a:after {
+  /* \00a0 == &nbsp; */
+  content: "\00a0\00a0";
+}
+
+.banner {
+  width: 100%;
+  padding: 2rem 4rem;
+  margin-bottom: 1rem;
+
+  background-color: var(--default-highlight-color);
+
+  font-weight: 700;
+}
+.banner > p {
+  text-align: center;
+}
+.banner > p + p {
+  margin-top: 0.4rem;
+}
+@media (min-width: 666px) {
+  .banner {
+    padding: 2rem 0;
+  }
+  .banner > p {
+    padding-left: calc(33% / 3);
+    width: 66%;
+    text-align: left;
+  }
+}
+
+main {
+  width: 100%;
+  padding: var(--gutter);
+  margin-bottom: 4rem;
+}
+@media (min-width: 666px) {
+  main {
+    padding: 0;
+    padding-left: calc(33% / 3);
+  }
+}
+
+article {
+  width: 100%;
+}
+article > img {
+  width: 100%;
+}
+article.post-inline + article.post-inline {
+  margin-top: 4rem;
+}
+@media (min-width: 666px) {
+  article {
+    width: 66%;
+  }
+}
+
+/* post header */
+article > header {
+  margin-bottom: 1rem;
+}
+article > header > h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+article > header > h1 > a {
+  text-decoration: none;
+}
+article > header > p { /* date */
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* post images */
+article > a.image-link {
+  display: block;
+}
+article > a.image-link, article > .yt-container {
+  margin-bottom: var(--standard-spacing);
+}
+article > p.caption {
+  position: relative;
+  --shift: calc(-1 * (var(--standard-spacing) + 1.5rem));
+  top: var(--shift);
+  margin-bottom: var(--shift);
+
+  font-size: 0.8rem;
+
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.6rem;
+
+  background-color: var(--default-highlight-color);
+}
+@media (min-width: 666px) {
+  article > p.caption {
+    width: 70%;
+    margin-left: 10%;
+  }
+}
+
+/* post text */
+.more > p,
+article > p,
+article > ul > li,
+article > ol > li {
+  line-height: 1.4rem;
+}
+.more > p:not(:first-child),
+article > p:not(:first-child),
+article > ul:not(:first-child),
+article > a.image-link:not(:first-child),
+article > .yt-container:not(:first-child) {
+  margin-top: var(--standard-spacing);
+}
+
+/* post footer */
+article > footer {
+  margin-top: 1.6rem;
+}
+
+article > .yt-container,
+article > a.image-link {
+  width: 90%;
+  margin: 0 auto;
+}
+.yt-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hello {
+  margin-bottom: -3rem;
+}
+
+@media (min-width: 666px) {
+  .head {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .hello {
+    width: 33%;
+  }
+  .more {
+    width: 67%;
+    margin-left: var(--gutter);
+    margin-top: 4rem;
+  }
+}
+.hello > img {
+  width: 100%;
+  border: 4px solid var(--default-highlight-color);
+}
+.hello > p {
+  position: relative;
+  top: -3.6rem;
+
+  margin-left: -0.5rem;
+
+  color: var(--latte-highlight);
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: .2rem;
+  line-height: 4rem;
+}
+@media (min-width: 666px) {
+  .hello > p {
+    margin-left: 0;
+    text-align: right;
+    padding-right: 0.2rem;
+  }
+}
