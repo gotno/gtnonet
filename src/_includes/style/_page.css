@@ -224,7 +224,7 @@ div.side-by-side:not(:first-child) {
 div.side-by-side > div:first-child {
   width: 80%;
 }
-div.side-by-side > div:first-child > img {
+div.side-by-side > div:first-child img {
   width: 100%;
 }
 div.side-by-side > div:last-child {
